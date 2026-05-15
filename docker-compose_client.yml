@@ -13,6 +13,9 @@ services:
       # Pulseaudio
       - XDG_RUNTIME_DIR=${SC_XDG_RUNTIME_DIR}
       - PULSE_SERVER=${SC_PULSE_SERVER}
+      # Remote Instance of Snapcast Server or MusicAssistant:
+      #SNAPCAST_REMOTE_HOST="<tcp|ws|wss>://<snapserver host or IP>[:port]"
+      - SNAPCAST_REMOTE_HOST=tcp://YOUR-SERVER-IP
     env_file: .env
     group_add:
       - audio
